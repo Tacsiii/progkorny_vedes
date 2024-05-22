@@ -7,16 +7,17 @@ import progkor.film.data.repository.Repository;
 import progkor.film.service.MovieService;
 
 import java.util.List;
-/*
-* This class delegates operations to Repository
-* */
 
+/**
+ * Implementation of {@link MovieService} that delegates operations to a {@link Repository}.
+ */
 @Service
-public class DeafultMovieService implements MovieService {
+public class DefaultMovieService implements MovieService {
 
     private final Repository<Movie, Long> movieRepository;
+
     @Autowired
-    public DeafultMovieService(Repository<Movie, Long> movieRepository) {
+    public DefaultMovieService(Repository<Movie, Long> movieRepository) {
         this.movieRepository = movieRepository;
     }
 
